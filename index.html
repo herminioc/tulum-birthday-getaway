@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tommy's Tulum Birthday Getaway · July 2026</title>
+<style>
+:root {
+  --sand:#F7F3EC;--sand-dark:#EDE7DB;--parchment:#FDFAF6;
+  --jungle:#1C3D2E;--jungle-mid:#2B5C43;--jungle-lite:#3D7A5A;
+  --cenote:#3BAACF;--cenote-pale:#EAF6FB;
+  --dusk:#C4593A;--dusk-pale:#FAF0EC;
+  --gold:#B8934A;
+  --text:#1E1E1E;--text-mid:#555;--text-lite:#888;
+  --border:#DDD5C8;
+  --radius:14px;--radius-sm:8px;
+  --shadow:0 2px 12px rgba(28,61,46,.08);
+  --shadow-md:0 6px 24px rgba(28,61,46,.13);
+}
+[data-dark] {
+  --sand:#161B18;--sand-dark:#1E2620;--parchment:#1A1F1C;
+  --jungle:#A8D5B5;--jungle-mid:#7DC09A;
+  --text:#EDEAE4;--text-mid:#AAA;--text-lite:#777;--border:#2E3830;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--sand);color:var(--text);line-height:1.65;transition:background .3s,color .3s}
+a{color:var(--cenote);text-decoration:none}
+a:hover{text-decoration:underline}
+ul{list-style:none}
+img{max-width:100%;display:block}
+
+.eyebrow{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--gold);display:block;margin-bottom:.35rem}
+h1{font-size:clamp(1.9rem,6vw,3.4rem);font-weight:800;line-height:1.08;color:var(--jungle)}
+h2{font-size:clamp(1.4rem,4vw,2rem);font-weight:700;color:var(--jungle);margin-bottom:1rem}
+h3{font-size:1.1rem;font-weight:700;color:var(--jungle-mid);margin-bottom:.5rem}
+h4{font-size:.9rem;font-weight:700;color:var(--jungle);margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em}
+p{color:var(--text-mid);margin-bottom:.75rem}
+p:last-child{margin-bottom:0}
+strong{color:var(--text);font-weight:600}
+
+.wrap{max-width:780px;margin:0 auto;padding:0 1.25rem}
+.section{padding:3rem 0}
+.section+.section{border-top:1px solid var(--border)}
+
+/* NAV */
+#nav{position:sticky;top:0;z-index:200;background:var(--parchment);border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
+.nav-inner{max-width:780px;margin:0 auto;padding:0 1.25rem;display:flex;align-items:center;gap:1rem;height:54px}
+.nav-brand{font-weight:800;font-size:.88rem;color:var(--jungle);white-space:nowrap;flex-shrink:0}
+.nav-links{display:flex;gap:1.4rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex:1}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{font-size:.8rem;font-weight:600;color:var(--text-mid);white-space:nowrap;transition:color .2s;letter-spacing:.02em}
+.nav-links a:hover{color:var(--jungle);text-decoration:none}
+.nav-actions{display:flex;gap:.4rem;flex-shrink:0}
+.icon-btn{background:none;border:none;cursor:pointer;font-size:1rem;padding:.3rem;color:var(--text-mid);transition:color .2s;border-radius:6px}
+.icon-btn:hover{color:var(--jungle)}
+
+/* HERO */
+#hero{background:var(--jungle);padding:3.5rem 0 3rem;position:relative;overflow:hidden}
+#hero::before{content:'';position:absolute;inset:0;background:
+  radial-gradient(ellipse 60% 80% at 90% 10%,rgba(59,170,207,.18) 0%,transparent 60%),
+  radial-gradient(ellipse 40% 60% at 5% 90%,rgba(184,147,74,.12) 0%,transparent 55%)}
+#hero .wrap{position:relative;z-index:1}
+.hero-layout{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.hero-text{flex:1;min-width:220px}
+#hero .eyebrow{color:rgba(255,255,255,.55)}
+#hero h1{color:#fff;margin-bottom:.5rem}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.65);margin-bottom:1.75rem;font-weight:400}
+.hero-photo-wrap{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:.6rem}
+.hero-photo{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid rgba(255,255,255,.3);box-shadow:0 4px 24px rgba(0,0,0,.35)}
+.hero-photo-label{font-size:.7rem;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase;text-align:center}
+
+/* COUNTDOWN */
+#countdown{display:inline-flex;gap:.5rem;flex-wrap:wrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:.8rem 1rem}
+.cd-block{text-align:center;min-width:48px}
+.cd-num{display:block;font-size:1.8rem;font-weight:800;color:#fff;line-height:1}
+.cd-label{display:block;font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.45);margin-top:.15rem}
+.cd-live{font-size:1rem;color:rgba(255,255,255,.8);padding:.4rem 0;font-style:italic}
+
+/* DAY CARDS */
+.day-card{background:var(--parchment);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:1rem;box-shadow:var(--shadow);overflow:hidden;transition:box-shadow .25s}
+.day-card:hover{box-shadow:var(--shadow-md)}
+.day-header{display:flex;align-items:center;gap:.85rem;padding:1rem 1.15rem;cursor:pointer;user-select:none}
+.day-date{background:var(--jungle);color:#fff;border-radius:8px;padding:.28rem .7rem;font-size:.75rem;font-weight:700;white-space:nowrap;flex-shrink:0}
+.day-title{font-weight:700;color:var(--jungle);flex:1;font-size:.98rem}
+.day-chevron{color:var(--text-lite);font-size:.85rem;transition:transform .3s;flex-shrink:0}
+.day-card.open .day-chevron{transform:rotate(180deg)}
+.day-img{width:100%;height:180px;object-fit:cover;display:block;border-top:1px solid var(--border)}
+.day-img-fallback{width:100%;height:180px;display:flex;align-items:center;justify-content:center;border-top:1px solid var(--border);font-size:2.5rem;background:linear-gradient(135deg,var(--jungle) 0%,var(--cenote) 100%)}
+.day-body{display:none;border-top:1px solid var(--border)}
+.day-card.open .day-body{display:block}
+.day-body-inner{padding:1.15rem}
+
+/* TIMELINE */
+.tl{padding-left:1.2rem;margin:.85rem 0}
+.tl-item{position:relative;padding-bottom:1.15rem;border-left:2px solid var(--border);padding-left:1rem}
+.tl-item:last-child{border-color:transparent;padding-bottom:0}
+.tl-item::before{content:'';position:absolute;left:-4.5px;top:5px;width:7px;height:7px;border-radius:50%;background:var(--cenote);border:2px solid var(--parchment)}
+.tl-time{font-size:.76rem;font-weight:700;color:var(--cenote);margin-bottom:.18rem;letter-spacing:.03em}
+.tl-what{font-weight:600;color:var(--text);font-size:.93rem;margin-bottom:.18rem}
+.tl-note{font-size:.86rem;color:var(--text-mid);margin:0}
+
+/* Meal badge */
+.meal-badge{display:inline-block;background:var(--dusk-pale);color:var(--dusk);border:1px solid rgba(196,89,58,.2);border-radius:20px;font-size:.73rem;font-weight:700;padding:.18rem .65rem;margin-bottom:.35rem;letter-spacing:.03em}
+.meal-name{font-size:.97rem;font-weight:700;color:var(--jungle);margin-bottom:.15rem}
+.meal-desc{font-size:.85rem;color:var(--text-mid)}
+
+/* Bring box */
+.bring-box{background:var(--cenote-pale);border:1px solid rgba(59,170,207,.22);border-radius:var(--radius-sm);padding:.9rem 1rem;margin-top:.9rem}
+.bring-box h4{color:var(--cenote);margin-bottom:.5rem}
+.bring-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:.28rem .7rem}
+.bring-item{font-size:.83rem;color:var(--text-mid);padding:.12rem 0 .12rem .95rem;position:relative}
+.bring-item::before{content:'✓';position:absolute;left:0;color:var(--cenote);font-weight:700}
+
+/* Info / tip boxes */
+.info-box{background:var(--dusk-pale);border-left:3px solid var(--dusk);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:.8rem .95rem;margin-top:.9rem;font-size:.88rem;color:var(--text-mid)}
+.info-box strong{color:var(--dusk);display:block;margin-bottom:.2rem}
+.tip-box{background:#FFFBF0;border-left:3px solid var(--gold);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:.8rem .95rem;margin-top:.9rem;font-size:.88rem;color:var(--text-mid)}
+.tip-box strong{color:var(--gold);display:block;margin-bottom:.2rem}
+
+/* Coba table */
+.coba-box{background:var(--sand-dark);border-radius:var(--radius-sm);padding:.95rem 1rem;margin-top:.75rem}
+.coba-box h4{color:var(--jungle);margin-bottom:.6rem}
+.coba-row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--border);padding:.4rem 0;font-size:.85rem}
+.coba-row:last-child{border-bottom:none}
+.coba-label{color:var(--text-mid);flex-shrink:0;margin-right:.5rem}
+.coba-val{font-weight:600;color:var(--text);text-align:right}
+
+/* Cenote image inside card */
+.cenote-img{width:100%;height:160px;object-fit:cover;border-radius:var(--radius-sm);margin-top:.6rem;display:block}
+.cenote-img-fallback{width:100%;height:160px;border-radius:var(--radius-sm);margin-top:.6rem;background:linear-gradient(135deg,#1a6b8a 0%,#3BAACF 100%);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:.85rem;font-style:italic}
+
+/* Birthday card */
+.bday-card{background:var(--jungle);border-radius:var(--radius);padding:1.4rem;margin-top:.9rem;color:#fff;text-align:center}
+.bday-card h3{color:#fff;font-size:1.25rem;margin-bottom:.35rem}
+.bday-card p{color:rgba(255,255,255,.65)}
+.bday-drinks{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;margin-top:.85rem}
+.bday-drink{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:20px;font-size:.78rem;padding:.25rem .75rem;font-weight:600}
+
+/* Villa */
+.address-card{background:var(--parchment);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;margin-bottom:.85rem}
+.address-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-lite);margin-bottom:.3rem}
+.address-val{font-weight:600;color:var(--jungle);line-height:1.55}
+.copy-btn{margin-top:.55rem;background:none;border:1px solid var(--border);border-radius:6px;padding:.28rem .7rem;font-size:.76rem;cursor:pointer;color:var(--text-mid);transition:all .2s;display:inline-block}
+.copy-btn:hover{background:var(--jungle);color:#fff;border-color:var(--jungle)}
+.map-btn{display:inline-flex;align-items:center;gap:.35rem;background:var(--cenote);color:#fff;border-radius:var(--radius-sm);padding:.6rem 1rem;font-size:.85rem;font-weight:700;margin-top:.7rem;margin-left:.5rem;transition:background .2s;cursor:pointer;border:none;text-decoration:none}
+.map-btn:hover{background:var(--jungle);text-decoration:none;color:#fff}
+.villa-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-bottom:.85rem}
+.villa-stat{background:var(--parchment);border:1px solid var(--border);border-radius:var(--radius-sm);padding:.8rem .95rem}
+.villa-stat-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-lite);margin-bottom:.18rem}
+.villa-stat-val{font-size:.92rem;font-weight:600;color:var(--text)}
+.pending{color:var(--text-lite);font-style:italic;font-weight:400}
+
+/* Food */
+.chef-meal{background:var(--parchment);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;margin-bottom:.7rem;display:flex;gap:.9rem;align-items:flex-start}
+.chef-day{background:var(--jungle);color:#fff;border-radius:8px;padding:.28rem .6rem;font-size:.7rem;font-weight:700;white-space:nowrap;flex-shrink:0;text-align:center;line-height:1.3;min-width:42px}
+.chef-name{font-weight:700;color:var(--jungle);margin-bottom:.12rem;font-size:.95rem}
+.chef-time{font-size:.8rem;color:var(--text-lite);margin-bottom:.18rem}
+.chef-desc{font-size:.85rem;color:var(--text-mid)}
+.grocery-section{margin-top:1.5rem}
+.grocery-cat{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-lite);font-weight:700;border-bottom:1px solid var(--border);padding-bottom:.35rem;margin-bottom:.5rem;margin-top:1rem}
+.grocery-items{display:flex;flex-wrap:wrap;gap:.35rem}
+.grocery-chip{background:var(--sand-dark);color:var(--text-mid);border:1px solid var(--border);border-radius:20px;font-size:.8rem;padding:.22rem .7rem}
+
+/* Transport */
+.transport-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.transport-card{background:var(--parchment);border:1px solid var(--border);border-radius:var(--radius);padding:1rem}
+.transport-icon{font-size:1.6rem;margin-bottom:.4rem}
+.transport-name{font-weight:700;color:var(--jungle);margin-bottom:.35rem;font-size:.92rem}
+.transport-list{padding-left:1rem;margin-top:.35rem}
+.transport-list li{font-size:.82rem;color:var(--text-mid);list-style:disc;padding:.08rem 0}
+.transport-full{background:var(--parchment);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;margin-top:.7rem}
+
+/* Reminders */
+.reminder-list{margin-top:.75rem;padding-left:0}
+.reminder-list li{font-size:.9rem;color:var(--text-mid);padding:.3rem 0 .3rem 1.4rem;position:relative;border-bottom:1px solid var(--border)}
+.reminder-list li:last-child{border-bottom:none}
+.reminder-list li::before{content:'→';position:absolute;left:0;color:var(--gold);font-weight:700}
+
+/* Emergency */
+.emergency-banner{background:var(--jungle);color:#fff;border-radius:var(--radius);padding:.95rem 1.2rem;display:flex;align-items:center;gap:1rem;margin-bottom:1.1rem}
+.emergency-num{font-size:1.8rem;font-weight:800;color:#fff;flex-shrink:0}
+.emergency-text{font-size:.83rem;color:rgba(255,255,255,.7)}
+.emergency-text strong{color:#fff}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.35rem;border-radius:var(--radius-sm);padding:.6rem 1.1rem;font-size:.85rem;font-weight:700;cursor:pointer;transition:all .2s;border:none;text-decoration:none}
+.btn-outline{background:none;border:1.5px solid var(--border);color:var(--text-mid)}
+.btn-outline:hover{border-color:var(--jungle);color:var(--jungle);text-decoration:none}
+.btn-sm{padding:.35rem .8rem;font-size:.78rem}
+
+/* Back to top */
+#btt{position:fixed;bottom:1.4rem;right:1.4rem;z-index:100;background:var(--jungle);color:#fff;border:none;width:40px;height:40px;border-radius:50%;font-size:1rem;cursor:pointer;box-shadow:var(--shadow-md);display:none;align-items:center;justify-content:center;transition:background .2s}
+#btt:hover{background:var(--jungle-mid)}
+#btt.show{display:flex}
+
+footer{background:var(--jungle);color:rgba(255,255,255,.55);text-align:center;padding:1.75rem 1.25rem;font-size:.8rem}
+footer strong{color:#fff}
+
+@media(max-width:500px){
+  .villa-grid,.transport-grid{grid-template-columns:1fr}
+  .hero-photo{width:100px;height:100px}
+  .hero-layout{gap:1.25rem}
+  .hero-photo-wrap{flex-direction:row;align-items:center}
+}
+@media print{
+  #nav,#btt{display:none!important}
+  .day-body{display:block!important}
+  .day-chevron{display:none}
+  body{background:#fff}
+  .day-img,.cenote-img{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">🌴 Tommy's Tulum</div>
+    <nav class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#itinerary">Itinerary</a>
+      <a href="#villa">Villa</a>
+      <a href="#food">Food</a>
+      <a href="#around">Getting Around</a>
+      <a href="#info">Info</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="todayBtn" title="Jump to today">📅</button>
+      <button class="icon-btn" id="darkBtn" title="Dark mode">🌙</button>
+      <button class="icon-btn" onclick="sharePage()" title="Share">↗</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-layout">
+      <div class="hero-text">
+        <span class="eyebrow">July 16–20, 2026 · Tulum, Mexico</span>
+        <h1>Tommy's Tulum<br>Birthday Getaway</h1>
+        <p class="hero-sub">Twolum Villas · Eight guests · Five days of sun, sea &amp; celebration</p>
+        <div id="countdown">
+          <div class="cd-block"><span class="cd-num" id="cd-d">—</span><span class="cd-label">Days</span></div>
+          <div class="cd-block"><span class="cd-num" id="cd-h">—</span><span class="cd-label">Hrs</span></div>
+          <div class="cd-block"><span class="cd-num" id="cd-m">—</span><span class="cd-label">Min</span></div>
+          <div class="cd-block"><span class="cd-num" id="cd-s">—</span><span class="cd-label">Sec</span></div>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <!-- Tom photo: upload tom.jpg to GitHub repo alongside index.html -->
+        <img src="tom.jpg" alt="Tommy" class="hero-photo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div style="display:none;width:130px;height:130px;border-radius:50%;background:rgba(255,255,255,.1);border:3px solid rgba(255,255,255,.25);align-items:center;justify-content:center;font-size:3rem">🎂</div>
+        <div class="hero-photo-label">The Man of the Hour</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ITINERARY -->
+<section class="section" id="itinerary">
+  <div class="wrap">
+    <span class="eyebrow">Day by Day</span>
+    <h2>The Itinerary</h2>
+
+    <!-- THURSDAY -->
+    <div class="day-card open" id="day-thu" data-date="2026-07-16">
+      <div class="day-header">
+        <span class="day-date">Thu · Jul 16</span>
+        <span class="day-title">Arrival &amp; Welcome Dinner</span>
+        <span class="day-chevron">▼</span>
+      </div>
+      <img class="day-img"
+           src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Twolum_Tulum_Villa_Table.jpg/1200px-Twolum_Tulum_Villa_Table.jpg"
+           alt="Welcome dinner"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+           loading="lazy">
+      <div class="day-img-fallback" style="display:none">🍽️</div>
+      <div class="day-body">
+        <div class="day-body-inner">
+          <div class="tl">
+            <div class="tl-item">
+              <div class="tl-time">2:30 – 4:00 PM</div>
+              <div class="tl-what">First six guests arrive at Twolum Villas</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">5:00 – 6:00 PM</div>
+              <div class="tl-what">Final two guests arrive</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">7:00 PM</div>
+              <div class="tl-what">Welcome Dinner at the Villa</div>
+              <div class="tl-note" style="margin-top:.45rem">
+                <span class="meal-badge">Chef-prepared</span>
+                <div class="meal-name">Tulum Nights + Lobster</div>
+                <div class="meal-desc">Chef prepares, serves, and cleans up. Wine and beer included.</div>
+              </div>
+            </div>
+          </div>
+          <div class="tip-box">
+            <strong>🛒 Cancún Grocery Stop</strong>
+            Ask your airport driver in advance to stop at a supermarket in Cancún on the way to Tulum. Great for preferred liquor, specialty drinks, personal snacks, or anything else you'd like on hand. Allow extra time.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRIDAY -->
+    <div class="day-card" id="day-fri" data-date="2026-07-17">
+      <div class="day-header">
+        <span class="day-date">Fri · Jul 17</span>
+        <span class="day-title">Yoga, Brunch &amp; Birthday Celebration</span>
+        <span class="day-chevron">▼</span>
+      </div>
+      <div class="day-img-fallback" style="display:flex">🧘</div>
+      <div class="day-body">
+        <div class="day-body-inner">
+          <div class="tl">
+            <div class="tl-item">
+              <div class="tl-time">9:00 AM</div>
+              <div class="tl-what">Morning Yoga at the Villa</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">10:00 AM</div>
+              <div class="tl-what">Chef Brunch at the Villa</div>
+              <div class="tl-note" style="margin-top:.45rem">
+                <span class="meal-badge">Rise &amp; Shine</span>
+                <div class="meal-desc" style="margin-top:.3rem">Grilled Avocado · Tropical Fruit Crepe · Spinach Crepe · Ranchero Eggs · Orangeade</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">12:30 PM</div>
+              <div class="tl-what">Private Wellness Experience</div>
+              <div class="tl-note">
+                90-minute massage · 2 guests · 2 female therapists<br>
+                <span style="font-size:.82rem;color:var(--text-lite)">Choose your pressure with your therapist: light, medium, or deep</span>
+                <div class="bring-box" style="margin-top:.55rem">
+                  <h4>🌟 Complimentary Included</h4>
+                  <p style="font-size:.84rem;margin:0">LED Facial Masks (Red Light Therapy) included — reduces fine lines, boosts radiance, stimulates collagen, and evens skin tone.</p>
+                </div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">6:30 PM</div>
+              <div class="tl-what">Dinner at RosaNegra Tulum</div>
+              <div class="tl-note">
+                Allow time to shower, change, and arrange transport.
+                <div style="margin-top:.45rem">
+                  <a href="https://rosanegra.com.mx" target="_blank" class="btn btn-outline btn-sm">View Restaurant ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SATURDAY -->
+    <div class="day-card" id="day-sat" data-date="2026-07-18">
+      <div class="day-header">
+        <span class="day-date">Sat · Jul 18</span>
+        <span class="day-title">Cobá Ruins &amp; Cenotes</span>
+        <span class="day-chevron">▼</span>
+      </div>
+      <img class="day-img"
+           src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Coba_Nohoch_Mul.jpg/1200px-Coba_Nohoch_Mul.jpg"
+           alt="Cobá Nohoch Mul Pyramid"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+           loading="lazy">
+      <div class="day-img-fallback" style="display:none">🏛️</div>
+      <div class="day-body">
+        <div class="day-body-inner">
+          <div class="info-box">
+            <strong>⏰ Early Start — Be Ready</strong>
+            Shuttle picks up at the villa at 8:00 AM sharp. Please be ready before pickup.
+          </div>
+          <div class="tl">
+            <div class="tl-item">
+              <div class="tl-time">8:00 AM</div>
+              <div class="tl-what">Private shuttle pickup at the villa</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">~8:50 AM</div>
+              <div class="tl-what">Arrive at Cobá Archaeological Zone</div>
+              <div class="tl-note">~45–50 min drive · approx. 48 km</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">9:00 – 11:00 AM</div>
+              <div class="tl-what">Explore Cobá Ruins</div>
+              <div class="tl-note">
+                <div class="coba-box">
+                  <h4>📋 Cobá Site Details</h4>
+                  <div class="coba-row"><span class="coba-label">Hours</span><span class="coba-val">8:00 AM – 5:00 PM (last entry 4 PM)</span></div>
+                  <div class="coba-row"><span class="coba-label">Entrance fee</span><span class="coba-val">~$210 MXN · cash at gate · no online tickets</span></div>
+                  <div class="coba-row"><span class="coba-label">Bike rental</span><span class="coba-val">~$80 MXN</span></div>
+                  <div class="coba-row"><span class="coba-label">Tuk-tuk with driver</span><span class="coba-val">~$150 MXN / 1.5 hrs</span></div>
+                  <div class="coba-row"><span class="coba-label">Walking route</span><span class="coba-val">Flat &amp; shaded · ~2 km to pyramid</span></div>
+                  <div class="coba-row"><span class="coba-label">Nohoch Mul Pyramid</span><span class="coba-val">42 m tall · Climbing permitted</span></div>
+                  <div class="coba-row" style="border:none"><span class="coba-label">Pyramid hours</span><span class="coba-val">8:00 AM – 3:30 PM · max 15/group · 15 min at top</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">~11:30 AM</div>
+              <div class="tl-what">Lunch in Cobá</div>
+              <div class="tl-note"><span style="color:var(--text-lite);font-style:italic">Restaurant details coming soon</span></div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">~1:00 – 3:00 PM</div>
+              <div class="tl-what">Cenote Swimming</div>
+              <div class="tl-note">
+                1–2 hours of swimming and exploring
+                <img class="cenote-img"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/thirty-five/Cenote_Ik-Kil_Chichen_Itza.jpg/1200px-Cenote_Ik-Kil_Chichen_Itza.jpg"
+                     alt="Cenote"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                     loading="lazy">
+                <div class="cenote-img-fallback" style="display:none">🏊 Cenote</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">~3:30 PM</div>
+              <div class="tl-what">Estimated return to the villa</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">6:30 PM</div>
+              <div class="tl-what">Dinner in Tulum</div>
+              <div class="tl-note"><span style="color:var(--text-lite);font-style:italic">Restaurant details coming soon</span></div>
+            </div>
+          </div>
+          <div class="bring-box">
+            <h4>🎒 Bring with You</h4>
+            <div class="bring-grid">
+              <div class="bring-item">Swimsuit</div>
+              <div class="bring-item">Towel</div>
+              <div class="bring-item">Water shoes</div>
+              <div class="bring-item">Change of clothes</div>
+              <div class="bring-item">Reef-safe sunscreen</div>
+              <div class="bring-item">Insect repellent</div>
+              <div class="bring-item">Cash (pesos)</div>
+              <div class="bring-item">Waterproof phone pouch</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUNDAY -->
+    <div class="day-card" id="day-sun" data-date="2026-07-19">
+      <div class="day-header">
+        <span class="day-date">Sun · Jul 19</span>
+        <span class="day-title">Private Yacht Adventure</span>
+        <span class="day-chevron">▼</span>
+      </div>
+      <img class="day-img"
+           src="https://services.sevatulum.com/assets/yacht-azimut43.jpg"
+           alt="Azimut 43 Yacht"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+           loading="lazy">
+      <div class="day-img-fallback" style="display:none">⛵</div>
+      <div class="day-body">
+        <div class="day-body-inner">
+          <div class="info-box">
+            <strong>⏰ Early Start — Be Ready</strong>
+            Van pickup at the villa at 8:00 AM. Please be ready before pickup.
+          </div>
+          <div class="tl">
+            <div class="tl-item">
+              <div class="tl-time">8:00 AM</div>
+              <div class="tl-what">Van pickup at the villa</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">~9:00 AM</div>
+              <div class="tl-what">Board the Azimut 43' Yacht</div>
+              <div class="tl-note">
+                45–60 min drive to the marina
+                <div style="margin-top:.45rem">
+                  <a href="https://services.sevatulum.com/yacht-azimut43.html" target="_blank" class="btn btn-outline btn-sm">View Yacht Details ↗</a>
+                </div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">9:00 AM – 2:00 PM</div>
+              <div class="tl-what">On the Water</div>
+              <div class="tl-note">
+                <div class="bring-grid" style="margin-top:.35rem">
+                  <div class="bring-item">Full crew</div>
+                  <div class="bring-item">Open bar</div>
+                  <div class="bring-item">Lunch served aboard</div>
+                  <div class="bring-item">Snorkeling</div>
+                  <div class="bring-item">Swimming</div>
+                  <div class="bring-item">May return early</div>
+                </div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">~3:00 PM</div>
+              <div class="tl-what">Return to the villa</div>
+              <div class="tl-note">Allow time to shower and rest before dinner</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">6:30 PM</div>
+              <div class="tl-what">Dinner in Tulum</div>
+              <div class="tl-note"><span style="color:var(--text-lite);font-style:italic">Restaurant details coming soon</span></div>
+            </div>
+          </div>
+          <div class="bring-box">
+            <h4>⛵ Bring Aboard</h4>
+            <div class="bring-grid">
+              <div class="bring-item">Swimsuit</div>
+              <div class="bring-item">Cover-up</div>
+              <div class="bring-item">Towel</div>
+              <div class="bring-item">Sunglasses</div>
+              <div class="bring-item">Hat</div>
+              <div class="bring-item">Reef-safe sunscreen</div>
+              <div class="bring-item">Waterproof phone pouch</div>
+              <div class="bring-item">Change of clothes</div>
+              <div class="bring-item">Motion-sickness meds</div>
+              <div class="bring-item">Cash for gratuities</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MONDAY -->
+    <div class="day-card" id="day-mon" data-date="2026-07-20">
+      <div class="day-header">
+        <span class="day-date">Mon · Jul 20</span>
+        <span class="day-title">Free Day &amp; Tommy's Birthday Dinner</span>
+        <span class="day-chevron">▼</span>
+      </div>
+      <img class="day-img"
+           src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Tulum_sunset.jpg/1200px-Tulum_sunset.jpg"
+           alt="Tulum sunset"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+           loading="lazy">
+      <div class="day-img-fallback" style="display:none">🎂</div>
+      <div class="day-body">
+        <div class="day-body-inner">
+          <div class="tl">
+            <div class="tl-item">
+              <div class="tl-time">Daytime — Your Call</div>
+              <div class="tl-what">Free Day</div>
+              <div class="tl-note">
+                Beach · Beach club · Cenote · Downtown Tulum · Spa · Shopping · Lunch on your own — your choice.<br><br>
+                <em style="font-size:.82rem;color:var(--text-lite)">Beach conditions can vary daily. Check conditions before heading out.</em>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">5:00 – 6:00 PM</div>
+              <div class="tl-what">Everyone returns to the villa</div>
+              <div class="tl-note">Time to get ready for the birthday celebration</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">6:30 PM</div>
+              <div class="tl-what">Tommy's Birthday Dinner</div>
+              <div class="tl-note">
+                <div class="bday-card">
+                  <div style="font-size:1.8rem;margin-bottom:.35rem">🎂</div>
+                  <h3>Grill &amp; Chill</h3>
+                  <p>Chef-prepared birthday dinner at the villa · Lobster included</p>
+                  <div class="bday-drinks">
+                    <span class="bday-drink">Margaritas</span>
+                    <span class="bday-drink">Mojitos</span>
+                    <span class="bday-drink">Piña Coladas</span>
+                    <span class="bday-drink">Gin &amp; Tonics</span>
+                    <span class="bday-drink">Wine</span>
+                    <span class="bday-drink">Beer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-time">~8:00 PM</div>
+              <div class="tl-what">Private Bartender Service Begins</div>
+              <div class="tl-note">Full cocktail menu · Wine and beer available all evening</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- VILLA -->
+<section class="section" id="villa">
+  <div class="wrap">
+    <span class="eyebrow">Where We're Staying</span>
+    <h2>Twolum Villas</h2>
+    <div class="address-card">
+      <div class="address-label">Villa Address</div>
+      <div class="address-val">Calle 63 Sur y Calle 42 Sur<br>Supermanzana 8 Manzana 601 Lote 3<br>77760 Tulum, Q.R., Mexico</div>
+      <button class="copy-btn" onclick="copyText('Calle 63 Sur y Calle 42 Sur, Supermanzana 8 Manzana 601 Lote 3, 77760 Tulum, Q.R., Mexico')">Copy Address</button>
+      <a href="https://maps.google.com/?q=Calle+63+Sur+y+Calle+42+Sur+SM8+Tulum+Mexico" target="_blank" class="map-btn">📍 Open in Maps</a>
+    </div>
+    <div class="villa-grid">
+      <div class="villa-stat"><div class="villa-stat-label">Beach &amp; Hotel Zone</div><div class="villa-stat-val">5–10 min by scooter</div></div>
+      <div class="villa-stat"><div class="villa-stat-label">Downtown Tulum</div><div class="villa-stat-val">10–15 min by scooter</div></div>
+      <div class="villa-stat"><div class="villa-stat-label">Supermarkets</div><div class="villa-stat-val">10–15 min (traffic varies)</div></div>
+      <div class="villa-stat"><div class="villa-stat-label">Playa Paraíso</div><div class="villa-stat-val">5–10 min by scooter</div></div>
+    </div>
+    <div class="villa-grid">
+      <div class="villa-stat"><div class="villa-stat-label">WiFi Network</div><div class="villa-stat-val pending">Coming soon</div></div>
+      <div class="villa-stat"><div class="villa-stat-label">WiFi Password</div><div class="villa-stat-val pending">Coming soon</div></div>
+    </div>
+    <div class="address-card">
+      <div class="address-label">Check-In Instructions</div>
+      <div class="address-val pending">Details coming soon</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD -->
+<section class="section" id="food">
+  <div class="wrap">
+    <span class="eyebrow">Food &amp; Drinks</span>
+    <h2>Meals &amp; What's Waiting</h2>
+
+    <h3>Chef-Prepared Meals</h3>
+    <p>All chef meals include ingredients, preparation, and cleanup.</p>
+
+    <div class="chef-meal">
+      <div class="chef-day">Thu<br>Jul 16</div>
+      <div>
+        <div class="chef-time">7:00 PM · At the Villa</div>
+        <div class="chef-name">Tulum Nights + Lobster</div>
+        <div class="chef-desc">Welcome dinner for all eight guests</div>
+      </div>
+    </div>
+    <div class="chef-meal">
+      <div class="chef-day">Fri<br>Jul 17</div>
+      <div>
+        <div class="chef-time">10:00 AM · At the Villa</div>
+        <div class="chef-name">Rise &amp; Shine</div>
+        <div class="chef-desc">Grilled Avocado · Tropical Fruit Crepe · Spinach Crepe · Ranchero Eggs · Orangeade</div>
+      </div>
+    </div>
+    <div class="chef-meal">
+      <div class="chef-day">Mon<br>Jul 20</div>
+      <div>
+        <div class="chef-time">6:30 PM · At the Villa</div>
+        <div class="chef-name">Grill &amp; Chill + Lobster</div>
+        <div class="chef-desc">Birthday dinner · Private bartender from 8:00 PM · Full cocktail menu · Wine and beer all evening</div>
+      </div>
+    </div>
+
+    <div class="grocery-section">
+      <h3>Already Stocked at the Villa</h3>
+      <div class="grocery-cat">Drinks</div>
+      <div class="grocery-items">
+        <span class="grocery-chip">Topo Chico ×4</span>
+        <span class="grocery-chip">Modelo 12-pack</span>
+        <span class="grocery-chip">Diet Coke 12-pack</span>
+        <span class="grocery-chip">Rosé ×2</span>
+        <span class="grocery-chip">Wine</span>
+        <span class="grocery-chip">Drinking water</span>
+      </div>
+      <div class="grocery-cat">Coffee &amp; Breakfast</div>
+      <div class="grocery-items">
+        <span class="grocery-chip">Coffee (large bag)</span>
+        <span class="grocery-chip">Half-and-half</span>
+      </div>
+      <div class="grocery-cat">Fresh Fruit</div>
+      <div class="grocery-items">
+        <span class="grocery-chip">Mango</span><span class="grocery-chip">Pineapple</span>
+        <span class="grocery-chip">Watermelon</span><span class="grocery-chip">Papaya</span>
+        <span class="grocery-chip">Berries</span><span class="grocery-chip">Bananas</span>
+        <span class="grocery-chip">Grapes</span>
+      </div>
+      <div class="grocery-cat">Dips &amp; Snacks</div>
+      <div class="grocery-items">
+        <span class="grocery-chip">Fresh guacamole</span><span class="grocery-chip">Pico de gallo</span>
+        <span class="grocery-chip">Salsa verde</span><span class="grocery-chip">Tortilla chips</span>
+        <span class="grocery-chip">Mixed nuts</span><span class="grocery-chip">Trail mix</span>
+        <span class="grocery-chip">Hummus</span><span class="grocery-chip">Olives</span>
+      </div>
+      <div class="grocery-cat">Cheese &amp; Charcuterie</div>
+      <div class="grocery-items">
+        <span class="grocery-chip">Manchego</span><span class="grocery-chip">Aged cheddar</span>
+        <span class="grocery-chip">Prosciutto</span><span class="grocery-chip">Salami</span>
+      </div>
+      <div class="grocery-cat">Vegetables</div>
+      <div class="grocery-items">
+        <span class="grocery-chip">Cucumbers</span><span class="grocery-chip">Baby carrots</span>
+      </div>
+    </div>
+
+    <div class="tip-box" style="margin-top:1.25rem">
+      <strong>🛒 Want Something Specific?</strong>
+      Ask your airport driver to stop at a supermarket in Cancún on the way down. Selection and prices are better there than in the Tulum Hotel Zone. Great for preferred liquor, specialty drinks, personal snacks, or anything else you'd like on hand.
+    </div>
+  </div>
+</section>
+
+<!-- GETTING AROUND -->
+<section class="section" id="around">
+  <div class="wrap">
+    <span class="eyebrow">Transportation</span>
+    <h2>Getting Around Tulum</h2>
+    <div class="transport-grid">
+      <div class="transport-card">
+        <div class="transport-icon">🛵</div>
+        <div class="transport-name">Scooter</div>
+        <p style="font-size:.85rem;color:var(--text-mid);margin-bottom:.2rem">Villa → beach: 5–10 min<br>Villa → downtown: 10–15 min</p>
+        <ul class="transport-list">
+          <li>Always wear a helmet</li>
+          <li>Never ride after drinking</li>
+          <li>Photograph before accepting</li>
+          <li>Confirm insurance &amp; fuel</li>
+        </ul>
+      </div>
+      <div class="transport-card">
+        <div class="transport-icon">🚕</div>
+        <div class="transport-name">Taxis</div>
+        <ul class="transport-list">
+          <li>Agree on fare before getting in</li>
+          <li>Carry pesos &amp; small bills</li>
+          <li>Ask villa to call a trusted driver</li>
+          <li>Prices run higher in evenings</li>
+        </ul>
+      </div>
+    </div>
+    <div class="transport-full">
+      <div class="transport-icon">📱</div>
+      <div class="transport-name">Uber &amp; App Rides</div>
+      <p style="font-size:.85rem;color:var(--text-mid);margin:0">Uber availability varies in Tulum. Taxis or prearranged drivers are more dependable for scheduled plans. Rideshare prices tend to be higher during peak evening hours.</p>
+    </div>
+    <div class="transport-full" style="margin-top:.7rem">
+      <div class="transport-icon">🚐</div>
+      <div class="transport-name">Group Transportation</div>
+      <ul class="transport-list" style="margin-top:.35rem">
+        <li><strong>Saturday 8:00 AM</strong> — Shuttle to Cobá and cenotes</li>
+        <li><strong>Sunday 8:00 AM</strong> — Van to the yacht marina</li>
+      </ul>
+      <p style="font-size:.88rem;font-weight:700;color:var(--jungle);margin-top:.6rem;margin-bottom:0">Please be ready at the villa before scheduled pickup.</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK REMINDERS -->
+<section class="section" id="info">
+  <div class="wrap">
+    <span class="eyebrow">Good to Know</span>
+    <h2>Quick Reminders</h2>
+    <div class="address-card">
+      <div class="address-label">Villa Address</div>
+      <div class="address-val">Calle 63 Sur y Calle 42 Sur<br>Supermanzana 8 Manzana 601 Lote 3<br>77760 Tulum, Q.R., Mexico</div>
+      <button class="copy-btn" onclick="copyText('Calle 63 Sur y Calle 42 Sur, Supermanzana 8 Manzana 601 Lote 3, 77760 Tulum, Q.R., Mexico')">Copy Address</button>
+    </div>
+    <div class="emergency-banner">
+      <div>
+        <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.45);margin-bottom:.1rem">Emergency · Mexico</div>
+        <div class="emergency-num">911</div>
+      </div>
+      <div class="emergency-text"><strong>Police, fire, or medical — dial 911 anywhere in Mexico.</strong></div>
+    </div>
+    <ul class="reminder-list">
+      <li>Drink bottled water only — tap water is not safe for drinking</li>
+      <li>Use insect repellent, especially at dawn and dusk</li>
+      <li>Currency is Mexican Peso (MXN) — carry cash and small bills</li>
+      <li>Tipping: 15–20% at restaurants is standard</li>
+      <li>July is warm and humid — brief afternoon showers are common</li>
+      <li>If anyone feels unwell, rest, hydrate, and let the group know</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <strong>Tommy's Tulum Birthday Getaway · July 16–20, 2026</strong><br>
+  Twolum Villas · Tulum, Mexico
+</footer>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+
+<script>
+// COUNTDOWN
+function tick(){
+  var t=new Date('2026-07-16T19:00:00-05:00').getTime()-Date.now();
+  if(t<=0){
+    document.getElementById('countdown').innerHTML='<span class="cd-live">✨ The celebration is underway!</span>';
+    return;
+  }
+  var d=Math.floor(t/864e5),h=Math.floor((t%864e5)/36e5),m=Math.floor((t%36e5)/6e4),s=Math.floor((t%6e4)/1e3);
+  document.getElementById('cd-d').textContent=d;
+  document.getElementById('cd-h').textContent=String(h).padStart(2,'0');
+  document.getElementById('cd-m').textContent=String(m).padStart(2,'0');
+  document.getElementById('cd-s').textContent=String(s).padStart(2,'0');
+}
+tick();
+setInterval(tick,1000);
+
+// EXPANDABLE CARDS
+document.querySelectorAll('.day-header').forEach(function(h){
+  h.addEventListener('click',function(){
+    h.closest('.day-card').classList.toggle('open');
+  });
+});
+
+// TODAY BUTTON
+document.getElementById('todayBtn').addEventListener('click',function(){
+  var map={4:'day-thu',5:'day-fri',6:'day-sat',0:'day-sun',1:'day-mon'};
+  var id=map[new Date().getDay()];
+  if(id){
+    var el=document.getElementById(id);
+    if(el){el.classList.add('open');el.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
+});
+
+// DARK MODE
+(function(){
+  if(localStorage.getItem('theme')==='dark'){
+    document.documentElement.setAttribute('data-dark','');
+  }
+  document.getElementById('darkBtn').addEventListener('click',function(){
+    var isDark=document.documentElement.hasAttribute('data-dark');
+    if(isDark){
+      document.documentElement.removeAttribute('data-dark');
+      localStorage.setItem('theme','light');
+    } else {
+      document.documentElement.setAttribute('data-dark','');
+      localStorage.setItem('theme','dark');
+    }
+  });
+})();
+
+// BACK TO TOP
+window.addEventListener('scroll',function(){
+  document.getElementById('btt').classList.toggle('show',window.pageYOffset>400);
+});
+
+// COPY
+function copyText(t){
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(t).then(function(){alert('Copied to clipboard!');});
+  } else {
+    var a=document.createElement('textarea');
+    a.value=t;document.body.appendChild(a);a.select();
+    document.execCommand('copy');document.body.removeChild(a);
+    alert('Copied!');
+  }
+}
+
+// SHARE
+function sharePage(){
+  if(navigator.share){
+    navigator.share({
+      title:"Tommy's Tulum Birthday Getaway",
+      text:"Your guide for Tommy's Tulum Birthday — July 16–20, 2026",
+      url:window.location.href
+    });
+  } else if(navigator.clipboard){
+    navigator.clipboard.writeText(window.location.href).then(function(){alert('Link copied!');});
+  }
+}
+</script>
+</body>
+</html>
